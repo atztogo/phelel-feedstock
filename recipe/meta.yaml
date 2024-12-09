@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phelel-{{ version }}.tar.gz
-  sha256: 075f1ae0621c69f327c6739e3759e681735135af69f57b965376552a6907afa2
+  sha256: 0371338867a1200e645db3730d6266ac676127d3aee6cc797f62611063b18806
 
 build:
   entry_points:
