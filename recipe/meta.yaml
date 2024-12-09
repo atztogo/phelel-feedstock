@@ -16,15 +16,15 @@ build:
     - velph = phelel.velph.cli:cmd_root
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - phono3py >=3.6.0
     - finufft
     - click
@@ -43,6 +43,7 @@ test:
     - velph --help
     - pytest
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
 
