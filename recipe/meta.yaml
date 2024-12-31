@@ -1,13 +1,13 @@
 {% set name = "phelel" %}
-{% set version = "0.6.5" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phelel-{{ version }}.tar.gz
-  sha256: 0371338867a1200e645db3730d6266ac676127d3aee6cc797f62611063b18806
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a8bf30facf9ee02128662b3cb271a5765878b1f06dcca40f8b688d44d574bb5a
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - velph = phelel.velph.cli:cmd_root
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,6 +25,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - phonopy >=2.33.4
     - phono3py >=3.6.0
     - finufft
     - click
