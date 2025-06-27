@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.9.1" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 864f5fd3c5d065ef5e932c9dabc59881259855eb50f2f0e2ba6183cfd743e1e8
+  sha256: 96c64668da694d81a626868bbbde66faf79136db0055ea9d17ccaeca76cb84bd
 
 build:
   entry_points:
