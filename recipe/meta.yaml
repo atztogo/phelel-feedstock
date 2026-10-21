@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6ac57c1b379f6f603de420476fae7435b70453915d78473e55a15bd4a5cf0f1e
+  sha256: e3d6c6a42a4904698aecb432d41132def8eb3c47ea805f9aa0b483b40d99b91f
 
 build:
   entry_points:
@@ -47,6 +47,7 @@ test:
     - python {{ python_min }}
     - pip
     - pytest
+    - seekpath
 
 about:
   home: https://github.com/phonopy/phelel
