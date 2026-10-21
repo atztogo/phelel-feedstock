@@ -47,6 +47,7 @@ test:
     - python {{ python_min }}
     - pip
     - pytest
+    - seekpath
 
 about:
   home: https://github.com/phonopy/phelel
